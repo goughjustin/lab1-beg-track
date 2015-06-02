@@ -58,8 +58,8 @@ function assert(expression, failureMessage) {
 */
 
 //your code goes here
-var animalNoise1 = "Elephants are loud.";
-var animalNoise2 = "Lions are friendly";
+var animalNoise1 = 'Elephants are loud.';
+var animalNoise2 = 'Lions are friendly';
 
 assert(animalNoise1 === 'Elephants are loud.', 'animalNoise1 should tell you elephants are loud');
 assert(animalNoise2 === 'Lions are mean', 'animalNoise2 should tell you Lion are mean');
@@ -84,13 +84,11 @@ var sentence2 = 'Come over here so you can scratch my belly.';
 var newSentance1 = sentence1.split(' ');
 var newSentance2 = sentence2.split(' ');
 
-
-var removed = newSentance1.splice(0, Number.MAX_VALUE, 'chirp chirp chirp.');
-var removed = newSentance2.splice(0, Number.MAX_VALUE, 'chirp chirp chirp chirp chirp chirp chirp chirp chirp.');
+var sentence1 = newSentance1.splice(0, Number.MAX_VALUE, 'chirp chirp chirp.');
+var sentence2 = newSentance2.splice(0, Number.MAX_VALUE, 'chirp chirp chirp chirp chirp chirp chirp chirp chirp.');
 
 var sentence1 = newSentance1.join(' + ');
 var sentence2 = newSentance2.join(' + ');
-
 
 assert(sentence1 === 'chirp chirp chirp.', 'sentence 1 should have 3 chirps');
 assert(sentence2 === 'chirp chirp chirp chirp chirp chirp chirp chirp chirp.',
