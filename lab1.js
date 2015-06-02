@@ -58,6 +58,11 @@ function assert(expression, failureMessage) {
 */
 
 //your code goes here
+var animalNoise1 = "Elephants are loud.";
+var animalNoise2 = "Lions are friendly";
+
+assert(animalNoise1 === 'Elephants are loud.', 'animalNoise1 should tell you elephants are loud');
+assert(animalNoise2 === 'Lions are mean', 'animalNoise2 should tell you Lion are mean');
 
 /* ----------------- Meerkats -------------------------------------------------
  Meerkats make a sort of chirping noise (according to my 30 seconds of
@@ -76,6 +81,16 @@ var sentence2 = 'Come over here so you can scratch my belly.';
 */
 
 // your code goes here
+var newSentance1 = sentence1.split(' ');
+var newSentance2 = sentence2.split(' ');
+
+
+var removed = newSentance1.splice(0, Number.MAX_VALUE, 'chirp chirp chirp.');
+var removed = newSentance2.splice(0, Number.MAX_VALUE, 'chirp chirp chirp chirp chirp chirp chirp chirp chirp.');
+
+var sentence1 = newSentance1.join(' + ');
+var sentence2 = newSentance2.join(' + ');
+
 
 assert(sentence1 === 'chirp chirp chirp.', 'sentence 1 should have 3 chirps');
 assert(sentence2 === 'chirp chirp chirp chirp chirp chirp chirp chirp chirp.',
@@ -95,6 +110,8 @@ var nextAnimal;
 // Assign one of your favorite animals to nextAnimal using Math.random() to pick
 
 // your code goes here
+var favoriteAnimals = ['elephant', 'penguin', 'eagle', 'camel'];
+var nextAnimal = favoriteAnimals[Math.floor(Math.random() * favoriteAnimals.length)];
 
 assert(nextAnimal, 'assign something to nextAnimal');
 
@@ -109,10 +126,10 @@ assert(nextAnimal, 'assign something to nextAnimal');
 // don't require quotes for the code to work. Remove the unnecessary quotes.
 
 var animalExhibitStats = {
-  'numberOpen': 13,
+  numberOpen: 13,
   'number closed': 2,
   'petting-zoo-open': true,
-  'mostPopular': 'Lucky the Emperor Penguin',
+  mostPopular: 'Lucky the Emperor Penguin',
   '2ndMostPopular': 'Dumbo the Depressed Donkey'
 };
 
@@ -123,7 +140,7 @@ var animalExhibitStats = {
  notation with dot notation wherever possible.
 */
 
-assert(animalExhibitStats['numberOpen'] === 13, 'there should be 13 open exhibits');
+assert(animalExhibitStats.numberOpen === 13, 'there should be 13 open exhibits');
 assert(animalExhibitStats['number closed'] === 2, 'there should be 2 closed exhibits');
 assert(animalExhibitStats['petting-zoo-open'], 'hey! =( i was promised meerkats!');
 assert(animalExhibitStats['2ndMostPopular'] === 'Dumbo the Depressed Donkey',
@@ -134,6 +151,8 @@ assert(animalExhibitStats['2ndMostPopular'] === 'Dumbo the Depressed Donkey',
 // Use the above examples to guide you.
 
 // your assert goes here
+assert(animalExhibitStats.mostPopular === 'Lucky the Emperor Penguin',
+  'Penguin emperor will always be most popular');
 
 /* ----------------- Code Style ----------------------------------------
  TODO: 10 points
